@@ -178,8 +178,8 @@ $( function()
 		var selectorG = 'a[data-imagelightbox="g"]';
 		var instanceG = $( selectorG ).imageLightbox(
 		{
-			onStart:		function(){ arrowsOn( instanceG, selectorG ); },
-			onEnd:			function(){ arrowsOff(); activityIndicatorOff(); },
+			onStart:		function(){ closeButtonOn( instanceG ); arrowsOn( instanceG, selectorG ); },
+			onEnd:			function(){ closeButtonOff(); arrowsOff(); activityIndicatorOff(); },
 			onLoadStart: 	function(){ activityIndicatorOn(); },
 			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
 		});
