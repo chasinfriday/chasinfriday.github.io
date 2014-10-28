@@ -129,83 +129,23 @@ $( function()
 				$( '.imagelightbox-arrow' ).remove();
 			};
 
-
-		//	WITH ACTIVITY INDICATION
-
-		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
-		{
-			onLoadStart:	function() { activityIndicatorOn(); },
-			onLoadEnd:		function() { activityIndicatorOff(); },
-			onEnd:	 		function() { activityIndicatorOff(); }
-		});
-
-
-		//	WITH OVERLAY & ACTIVITY INDICATION
-
-		$( 'a[data-imagelightbox="b"]' ).imageLightbox(
-		{
-			onStart: 	 function() { overlayOn(); },
-			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
-			onLoadStart: function() { activityIndicatorOn(); },
-			onLoadEnd:	 function() { activityIndicatorOff(); }
-		});
-
-
-		//	WITH "CLOSE" BUTTON & ACTIVITY INDICATION
-
-		var instanceC = $( 'a[data-imagelightbox="c"]' ).imageLightbox(
-		{
-			quitOnDocClick:	false,
-			onStart:		function() { closeButtonOn( instanceC ); },
-			onEnd:			function() { closeButtonOff(); activityIndicatorOff(); },
-			onLoadStart: 	function() { activityIndicatorOn(); },
-			onLoadEnd:	 	function() { activityIndicatorOff(); }
-		});
-
-
-		//	WITH CAPTION & ACTIVITY INDICATION
-
-		$( 'a[data-imagelightbox="d"]' ).imageLightbox(
-		{
-			onLoadStart: function() { captionOff(); activityIndicatorOn(); },
-			onLoadEnd:	 function() { captionOn(); activityIndicatorOff(); },
-			onEnd:		 function() { captionOff(); activityIndicatorOff(); }
-		});
-
-
 		//	WITH ARROWS & ACTIVITY INDICATION
 
-		var selectorG = 'a[data-imagelightbox="g"]';
-		var instanceG = $( selectorG ).imageLightbox(
+		var selectorGallery = 'a[data-imagelightbox="gallery"]';
+		var instanceGallery = $( selectorGallery ).imageLightbox(
 		{
-			onStart:		function(){ closeButtonOn( instanceG ); arrowsOn( instanceG, selectorG ); },
+			onStart:		function(){ closeButtonOn( instanceGallery ); arrowsOn( instanceGallery, selectorGallery ); },
 			onEnd:			function(){ closeButtonOff(); arrowsOff(); activityIndicatorOff(); },
 			onLoadStart: 	function(){ activityIndicatorOn(); },
 			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
 		});
-
-
-		//	WITH NAVIGATION & ACTIVITY INDICATION
-
-		var selectorE = 'a[data-imagelightbox="e"]';
-		var instanceE = $( selectorE ).imageLightbox(
+		
+		var selectorEP = 'a[data-imagelightbox="ep"]';
+		var instanceEP = $( selectorEP ).imageLightbox(
 		{
-			onStart:	 function() { navigationOn( instanceE, selectorE ); },
-			onEnd:		 function() { navigationOff(); activityIndicatorOff(); },
-			onLoadStart: function() { activityIndicatorOn(); },
-			onLoadEnd:	 function() { navigationUpdate( selectorE ); activityIndicatorOff(); }
+			onStart:		function(){ closeButtonOn( instanceEP ); arrowsOn( instanceEP, selectorEP ); },
+			onEnd:			function(){ closeButtonOff(); arrowsOff(); activityIndicatorOff(); },
+			onLoadStart: 	function(){ activityIndicatorOn(); },
+			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
 		});
-
-
-		//	ALL COMBINED
-
-		var selectorF = 'a[data-imagelightbox="f"]';
-		var instanceF = $( selectorF ).imageLightbox(
-		{
-			onStart:		function() { overlayOn(); closeButtonOn( instanceF ); arrowsOn( instanceF, selectorF ); },
-			onEnd:			function() { overlayOff(); captionOff(); closeButtonOff(); arrowsOff(); activityIndicatorOff(); },
-			onLoadStart: 	function() { captionOff(); activityIndicatorOn(); },
-			onLoadEnd:	 	function() { captionOn(); activityIndicatorOff(); $( '.imagelightbox-arrow' ).css( 'display', 'block' ); }
-		});
-
 	});
