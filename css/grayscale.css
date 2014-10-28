@@ -30,7 +30,8 @@ h6 {
     letter-spacing: 1px;
 }
 
-p {
+p
+ {
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
@@ -42,6 +43,11 @@ p {
         font-size: 20px;
         line-height: 1.6;
     }
+	
+	li {
+		font-size: 20px;
+		line-height: 1.5em;
+	}
 }
 
 a {
@@ -255,7 +261,7 @@ a:focus {
 	padding-bottom: 20px;
 }
 
-.download-section {
+.gallery-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -275,10 +281,10 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
-    .download-section {
+    .gallery-section {
         padding: 100px 0;
     }
 
