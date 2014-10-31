@@ -197,6 +197,10 @@ a:focus {
     transition: background .3s ease-in-out;
 }
 
+.margin-center-horizontal {
+	margin: 0 auto;
+}
+
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
