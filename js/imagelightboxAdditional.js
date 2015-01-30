@@ -148,4 +148,13 @@ $( function()
 			onLoadStart: 	function(){ activityIndicatorOn(); },
 			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
 		});
+		
+		var selectorTopFM = 'a[data-imagelightbox="topFM"]';
+		var instanceTopFM = $( selectorTopFM ).imageLightbox(
+		{
+			onStart:		function(){ closeButtonOn( instanceTopFM ); },
+			onEnd:			function(){ closeButtonOff(); activityIndicatorOff(); },
+			onLoadStart: 	function(){ activityIndicatorOn(); },
+			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
+		});
 	});
